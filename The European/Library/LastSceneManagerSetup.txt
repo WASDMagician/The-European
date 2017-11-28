@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/Scenes/UK/UK.unity
+  isLoaded: 1
+  isActive: 1
