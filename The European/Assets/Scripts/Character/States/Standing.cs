@@ -21,7 +21,7 @@ public class Standing : Character_State {
 
     void Move()
     {
-        Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        Vector3 move = new Vector3(Input.GetAxis("Horizontal"), character_rigidbody.velocity.y / speed, Input.GetAxis("Vertical"));
         character_rigidbody.velocity = move * speed;
     }
 

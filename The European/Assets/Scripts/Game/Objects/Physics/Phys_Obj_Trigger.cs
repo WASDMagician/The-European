@@ -19,7 +19,7 @@ public class Phys_Obj_Trigger : MonoBehaviour {
         Phys_Obj obj = other.gameObject.GetComponent<Phys_Obj>();
         for(int i = 0; i < ids.Length; i++)
         {
-            if(obj.id == ids[i])
+            if(obj != null && obj.id == ids[i])
             {
                 print("ACTIVATE");
                 obj.Activate();
