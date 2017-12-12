@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Users/Joe.unity
+- path: Assets/Scenes/Levels/UK/UK.unity
   isLoaded: 1
   isActive: 1
