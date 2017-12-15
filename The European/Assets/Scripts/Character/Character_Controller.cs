@@ -4,7 +4,7 @@ using UnityEngine;
 
 [RequireComponent(typeof(Standing))]
 public class Character_Controller : MonoBehaviour {
-    public Character_State standing;
+    public Standing standing;
     public Character_State current_state;
 
 	// Use this for initialization
@@ -25,6 +25,16 @@ public class Character_Controller : MonoBehaviour {
         if (current_state != null)
         {
             current_state.State_Late_Update();
+        }
+    }
+
+    public void Switch_State(Character_State _state)
+    {
+        if(_state != current_state)
+        {
+            current_state.On_Switch_From();
+            current_state = _state;
+            current_state.On_Switch_To();
         }
     }
 }

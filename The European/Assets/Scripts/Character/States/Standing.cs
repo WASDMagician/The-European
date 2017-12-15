@@ -31,7 +31,7 @@ public class Standing : Character_State {
         {
             if(interactible != null)
             {
-                interactible.Interact();
+                interactible.Interact(character_controller);
             }
         }
     }
