@@ -11,9 +11,6 @@ public class UI_Text_Display : MonoBehaviour {
     string text;
     public float scale_speed, fade_speed;
 
-    bool hide_on_key;
-    KeyCode key_to_watch;
-
     Text_Trigger trigger_source;
 
     public void Set_Trigger_Source(Text_Trigger _trigger_source)
@@ -35,34 +32,19 @@ public class UI_Text_Display : MonoBehaviour {
         StartCoroutine(Show_Text_Time(_time));
     }
 
-    public void Set_Text(string _text, KeyCode _key_code)
-    {
-        text = _text;
-        text_object.text = _text;
-        hide_on_key = true;
-        key_to_watch = _key_code;
-        Show_Text();
-    }
-
     void Show_Text()
     {
         text_object_parent.SetActive(true);
         text_object_parent.transform.DOScale(1, scale_speed);
         text_object_parent.GetComponent<Image>().DOFade(1, fade_speed);
-        text_object.DOFade(1, fade_speed);
+        text_object.DOFade(1, fade_speed).OnComplete(Show_Complete);
     }
 
     public void Hide_Text()
     {
-        text_object_parent.transform.DOScale(0, scale_speed).OnComplete(On_Tween_End);
+        text_object_parent.transform.DOScale(0, scale_speed);
         text_object_parent.GetComponent<Image>().DOFade(0, fade_speed);
-        text_object.DOFade(0, fade_speed);
-        hide_on_key = false;
-    }
-
-    void On_Tween_End()
-    {
-        text_object_parent.SetActive(false);
+        text_object.DOFade(0, fade_speed).OnComplete(Hide_Complete);
     }
 
     IEnumerator Show_Text_Time(float _time)
@@ -72,19 +54,19 @@ public class UI_Text_Display : MonoBehaviour {
         Hide_Text();
     }
 
-    private void Update()
+    void Show_Complete()
     {
-        if(hide_on_key == true)
+        if(trigger_source != null)
         {
-            Watch_For_Key();
+            trigger_source.Text_Box_Shown();
         }
     }
 
-    void Watch_For_Key()
+    void Hide_Complete()
     {
-        if(Input.GetKeyDown(key_to_watch))
+        if(trigger_source != null)
         {
-            Hide_Text();
+            trigger_source.Text_Box_Hidden();
         }
     }
 }
