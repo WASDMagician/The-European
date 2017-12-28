@@ -1,0 +1,61 @@
+{
+    "format": {
+        "version": "1.0"
+    },
+    "shaders": {
+        "Main shader": {
+            "parameters": {
+                "Common Parameters": {
+                    "ao_intensity": 0.75,
+                    "emissive_intensity": 1,
+                    "height_force": 1,
+                    "horizonFade": 1.2999999523162842,
+                    "nbSamples": 16
+                },
+                "Parallax Occlusion Mapping": {
+                    "maxPOMSamples": 16,
+                    "minPOMSamples": 4,
+                    "pomStrength": 1,
+                    "usePOM": false
+                }
+            },
+            "shader": "pbr-metal-rough",
+            "shaderInstance": "Main shader"
+        }
+    },
+    "texturesets": {
+        "Body_Front1": {
+            "shader": "Main shader"
+        },
+        "Flash1": {
+            "shader": "Main shader"
+        },
+        "Flash_Bottom": {
+            "shader": "Main shader"
+        },
+        "Glass": {
+            "shader": "Main shader"
+        },
+        "Leather": {
+            "shader": "Main shader"
+        },
+        "Metal": {
+            "shader": "Main shader"
+        },
+        "Metal2": {
+            "shader": "Main shader"
+        },
+        "Plastic": {
+            "shader": "Main shader"
+        },
+        "Plastic_2": {
+            "shader": "Main shader"
+        },
+        "Screen1": {
+            "shader": "Main shader"
+        },
+        "lambert2": {
+            "shader": "Main shader"
+        }
+    }
+}

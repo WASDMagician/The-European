@@ -1,0 +1,174 @@
+fileFormatVersion: 2
+guid: 62af355700462184f9d8b82b7f71e807
+timeCreated: 1514122220
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: Body_Front
+    100002: Body_Top
+    100004: Button
+    100006: Button1
+    100008: //RootNode
+    100010: Clicker
+    100012: Flash
+    100014: Flash_Buttons
+    100016: Lens
+    100018: Main_Body
+    100020: polySurface1
+    100022: polySurface2
+    100024: polySurface3
+    100026: polySurface4
+    100028: polySurface5
+    100030: polySurface6
+    100032: Screen
+    100034: View_Finder
+    100036: View_finder_window
+    100038: Winder
+    400000: Body_Front
+    400002: Body_Top
+    400004: Button
+    400006: Button1
+    400008: //RootNode
+    400010: Clicker
+    400012: Flash
+    400014: Flash_Buttons
+    400016: Lens
+    400018: Main_Body
+    400020: polySurface1
+    400022: polySurface2
+    400024: polySurface3
+    400026: polySurface4
+    400028: polySurface5
+    400030: polySurface6
+    400032: Screen
+    400034: View_Finder
+    400036: View_finder_window
+    400038: Winder
+    2300000: Body_Front
+    2300002: Body_Top
+    2300004: Button
+    2300006: Button1
+    2300008: Clicker
+    2300010: Flash
+    2300012: Main_Body
+    2300014: polySurface1
+    2300016: polySurface2
+    2300018: polySurface3
+    2300020: polySurface4
+    2300022: polySurface5
+    2300024: polySurface6
+    2300026: Screen
+    2300028: View_Finder
+    2300030: View_finder_window
+    2300032: Winder
+    3300000: Body_Front
+    3300002: Body_Top
+    3300004: Button
+    3300006: Button1
+    3300008: Clicker
+    3300010: Flash
+    3300012: Main_Body
+    3300014: polySurface1
+    3300016: polySurface2
+    3300018: polySurface3
+    3300020: polySurface4
+    3300022: polySurface5
+    3300024: polySurface6
+    3300026: Screen
+    3300028: View_Finder
+    3300030: View_finder_window
+    3300032: Winder
+    4300000: Clicker
+    4300002: Button
+    4300004: Body_Front
+    4300006: Main_Body
+    4300008: Body_Top
+    4300010: Flash
+    4300012: polySurface4
+    4300014: polySurface5
+    4300016: polySurface6
+    4300018: Screen
+    4300020: polySurface1
+    4300022: polySurface2
+    4300024: polySurface3
+    4300026: View_Finder
+    4300028: Winder
+    4300030: View_finder_window
+    4300032: Button1
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
