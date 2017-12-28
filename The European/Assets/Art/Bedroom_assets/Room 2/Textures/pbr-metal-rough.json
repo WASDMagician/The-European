@@ -1,0 +1,54 @@
+{
+    "format": {
+        "version": "1.0"
+    },
+    "shaders": {
+        "Main shader": {
+            "parameters": {
+                "Common Parameters": {
+                    "ao_intensity": 0.75,
+                    "emissive_intensity": 1,
+                    "height_force": 1,
+                    "nbSamples": 16
+                }
+            },
+            "shader": "pbr-metal-rough",
+            "shaderInstance": "Main shader"
+        }
+    },
+    "texturesets": {
+        "Baseboard_material": {
+            "shader": "Main shader"
+        },
+        "Ceiling_material": {
+            "shader": "Main shader"
+        },
+        "DefaultMaterial": {
+            "shader": "Main shader"
+        },
+        "Door_Frame_Material": {
+            "shader": "Main shader"
+        },
+        "Door_material": {
+            "shader": "Main shader"
+        },
+        "Floor_material": {
+            "shader": "Main shader"
+        },
+        "Glass_material": {
+            "shader": "Main shader"
+        },
+        "Handle_material": {
+            "shader": "Main shader"
+        },
+        "Sill_material": {
+            "shader": "Main shader"
+        },
+        "Wall_material": {
+            "shader": "Main shader"
+        },
+        "Window_material": {
+            "shader": "Main shader"
+        }
+    }
+}
