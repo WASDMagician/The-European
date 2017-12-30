@@ -5,9 +5,9 @@ using UnityEngine;
 public class Standing_State : Character_State {
 
     //avg walk speed 1.4m/s //max run speed 12.5m/s //jump force 5382 newtons (something is wrong here)
-    [Range(1f, 12.5f)]
+    [Range(0.25f, 12.5f)]
     public float move_speed;
-    [Range(0f, 600f)]
+    [Range(0.25f, 600f)]
     public float jump_force;
 
     Vector3 forward = new Vector3(0, 0, 1);
@@ -25,6 +25,7 @@ public class Standing_State : Character_State {
     // Update is called once per frame
     public override void Update_State()
     {
+        base.Update_State();
         float y_vel = character_rigidbody.velocity.y;
         if (Input.GetKeyDown(KeyCode.Space) && Is_Grounded() == true)
         {
@@ -54,6 +55,19 @@ public class Standing_State : Character_State {
             return true;
         }
         return false;
+    }
+
+    public override void Switch_To()
+    {
+        base.Switch_To();
+        if(character_animator == null)
+        {
+            character_animator = GetComponent<Animator>();
+        }
+        if (character_animator != null)
+        {
+            character_animator.SetBool("Standing", true);
+        }
     }
 
     private void OnCollisionEnter(Collision collision)

@@ -11,7 +11,7 @@ public class Character_Controller : MonoBehaviour {
     {
         if (standing != null)
         {
-            current_state = standing;
+            Switch_State(standing);
         }
         else
         {
@@ -33,9 +33,18 @@ public class Character_Controller : MonoBehaviour {
     {
         if(_state != current_state)
         {
-            current_state.Switch_From();
-            current_state = _state;
-            current_state.Switch_To();
+            if (current_state != null)
+            {
+                current_state.Switch_From();
+            }
+            if (_state != null)
+            {
+                current_state = _state;
+            }
+            if (current_state != null)
+            {
+                current_state.Switch_To();
+            }
         }
     }
 
