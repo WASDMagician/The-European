@@ -18,6 +18,6 @@ public class Phys_Obj : MonoBehaviour {
 
     public virtual void Activate()
     {
-
+        
     }
 }

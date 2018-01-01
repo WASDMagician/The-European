@@ -10,6 +10,9 @@ public class Standing_State : Character_State {
     [Range(0.25f, 600f)]
     public float jump_force;
 
+    public float cast_distance;
+    public KeyCode interact_keycode;
+
     Vector3 forward = new Vector3(0, 0, 1);
     Vector3 right = new Vector3(1, 0, 0);
 
@@ -32,6 +35,10 @@ public class Standing_State : Character_State {
             character_rigidbody.AddForce(this.transform.up * jump_force, ForceMode.Impulse);
             y_vel = character_rigidbody.velocity.y;
         }
+        if(Input.GetKeyDown(interact_keycode))
+        {
+            Interact();
+        }
         character_rigidbody.velocity = new Vector3(Input.GetAxis("Horizontal") * move_speed, y_vel, Input.GetAxis("Vertical") * move_speed);
         if (Input.anyKey)
         {
@@ -39,10 +46,62 @@ public class Standing_State : Character_State {
         }
     }
 
+    void Interact()
+    {
+        if(interactible != null)
+        {
+            interactible.Stop_Interacting();
+            interactible = null;
+            return;
+        }
+        Interactible found_interactible = null;
+        Vector3 position = this.transform.position;
+        Ray ray = new Ray(position, this.transform.forward);
+        RaycastHit hit_out;
+        Physics.Raycast(ray, out hit_out, cast_distance);
+        if (hit_out.collider != null)
+        {
+            found_interactible = hit_out.collider.GetComponent<Interactible>();
+            if (found_interactible != null)
+            {
+                found_interactible.Interact(this);
+                return;
+            }
+        }
+        position.y += cast_height;
+        ray = new Ray(position, this.transform.forward);
+        Physics.Raycast(ray, out hit_out, cast_distance);
+        if (hit_out.collider != null)
+        {
+            found_interactible = hit_out.collider.GetComponent<Interactible>();
+            if (found_interactible != null)
+            {
+                found_interactible.Interact(this);
+                return;
+            }
+        }
+        position.y -= (cast_height * 2);
+        ray = new Ray(position, this.transform.forward);
+        Physics.Raycast(ray, out hit_out, cast_distance);
+        if (hit_out.collider != null)
+        {
+            found_interactible = hit_out.collider.GetComponent<Interactible>();
+            if (found_interactible != null)
+            {
+                found_interactible.Interact(this);
+                return;
+            }
+        }
+
+    }
+
     void Set_Direction(Vector3 _input)
     {
         _input.y = 0;
-        this.transform.forward = _input;
+        if (_input != Vector3.zero)
+        {
+            this.transform.forward = _input;
+        }
     }
 
     bool Is_Grounded()
@@ -69,6 +128,21 @@ public class Standing_State : Character_State {
             character_animator.SetBool("Standing", true);
         }
     }
+
+    public override void Switch_From()
+    {
+        base.Switch_From();
+        if(character_animator == null)
+        {
+            character_animator = GetComponent<Animator>();
+        }
+        if(character_animator != null)
+        {
+            character_animator.SetBool("Standing", false);
+        }
+    }
+
+    
 
     private void OnCollisionEnter(Collision collision)
     {

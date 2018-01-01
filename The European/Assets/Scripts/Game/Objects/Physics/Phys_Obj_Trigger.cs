@@ -17,11 +17,14 @@ public class Phys_Obj_Trigger : MonoBehaviour {
     private void OnTriggerEnter(Collider other)
     {
         Phys_Obj obj = other.gameObject.GetComponent<Phys_Obj>();
+        if (obj != null)
+        {
+            print(obj.name);
+        }
         for(int i = 0; i < ids.Length; i++)
         {
             if(obj != null && obj.id == ids[i])
             {
-                print("ACTIVATE");
                 obj.Activate();
             }
         }

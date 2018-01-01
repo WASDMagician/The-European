@@ -13,6 +13,10 @@ ModelImporter:
     100010: Right
     100012: Right_end
     100014: Cube.000
+    100016: Camera
+    100018: Lamp
+    100020: Left_end_end
+    100022: Right_end_end
     400000: Armature
     400002: Cube.002
     400004: Left
@@ -21,6 +25,11 @@ ModelImporter:
     400010: Right
     400012: Right_end
     400014: Cube.000
+    400016: Camera
+    400018: Lamp
+    400020: Left_end_end
+    400022: Right_end_end
+    2000000: Camera
     4300000: Cube.002
     4300002: Cube.000
     7400000: Armature|ArmatureAction
@@ -31,7 +40,15 @@ ModelImporter:
     7400010: Armature|Open_Book.001
     7400012: Armature|Open_Book.002
     7400014: Armature|Open_Book.003
+    7400016: Armature|Armature|Armature|Closed_Book_Idle|Armature|Closed_Book_Idle
+    7400018: Armature|Armature|Armature|Idle_Book.001|Armature|Idle_Book.001
+    7400020: Armature|Armature|Armature|Idle_Book|Armature|Idle_Book
+    7400022: Armature|Armature|Armature|Open_Book.001|Armature|Open_Book.001
+    7400024: Armature|Armature|Armature|Open_Book.002|Armature|Open_Book.002
+    7400026: Armature|Armature|Armature|Open_Book.003|Armature|Open_Book.003
+    7400028: Armature|Armature|Armature|Open_Book|Armature|Open_Book
     9500000: //RootNode
+    10800000: Lamp
     13700000: Cube.002
     13700002: Cube.000
   materials:
