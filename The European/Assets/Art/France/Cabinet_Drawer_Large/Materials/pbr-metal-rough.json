@@ -1,0 +1,30 @@
+{
+    "format": {
+        "version": "1.0"
+    },
+    "shaders": {
+        "Main shader": {
+            "parameters": {
+                "Common Parameters": {
+                    "ao_intensity": 0.75,
+                    "emissive_intensity": 1,
+                    "height_force": 1,
+                    "nbSamples": 16
+                }
+            },
+            "shader": "pbr-metal-rough",
+            "shaderInstance": "Main shader"
+        }
+    },
+    "texturesets": {
+        "Cabinet_Drawer.001": {
+            "shader": "Main shader"
+        },
+        "Cabinet_Handle.001": {
+            "shader": "Main shader"
+        },
+        "Cabinet_Trim.001": {
+            "shader": "Main shader"
+        }
+    }
+}

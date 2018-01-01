@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Levels/UK/UK.unity
+- path: Assets/Scenes/Levels/France/France.unity
   isLoaded: 1
   isActive: 1

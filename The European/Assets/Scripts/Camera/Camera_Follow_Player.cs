@@ -7,6 +7,7 @@ public class Camera_Follow_Player : MonoBehaviour {
     public Vector3 offset;
     public Vector3 rotation;
     public float follow_speed;
+    public Vector3 min_position, max_position;
 
 	// Use this for initialization
 	void Start () {
@@ -20,6 +21,7 @@ public class Camera_Follow_Player : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         Update_Camera();
+        Keep_In_Bounds();
 	}
 
     void Update_Camera()
@@ -29,5 +31,35 @@ public class Camera_Follow_Player : MonoBehaviour {
             this.transform.position = Vector3.Lerp(this.transform.position, player_object.transform.position + offset, follow_speed * Time.deltaTime);
             this.transform.rotation = Quaternion.Euler(rotation);
         }
+    }
+
+    void Keep_In_Bounds()
+    {
+        Vector3 position = this.transform.position;
+        if(position.x < min_position.x)
+        {
+            position.x = min_position.x;
+        }
+        if (position.x > max_position.x)
+        {
+            position.x = max_position.x;
+        }
+        if(position.y < min_position.y)
+        {
+            position.y = min_position.y;
+        }
+        if(position.y > max_position.y)
+        {
+            position.y = max_position.y;
+        }
+        if(position.z < min_position.z)
+        {
+            position.z = min_position.z;
+        }
+        if(position.z > max_position.z)
+        {
+            position.z = max_position.z;
+        }
+        this.transform.position = position;
     }
 }
