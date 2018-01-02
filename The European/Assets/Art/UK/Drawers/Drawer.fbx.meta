@@ -1,0 +1,191 @@
+fileFormatVersion: 2
+guid: 03b2c97d07cc226429744cb73da5ae3e
+timeCreated: 1513341373
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: a_low
+    100002: b_low
+    100004: b_low 1
+    100006: c_low
+    100008: d_low
+    100010: //RootNode
+    100012: e_low
+    100014: Low
+    100016: transform1
+    100018: transform2
+    100020: transform3
+    100022: transform4
+    100024: transform5
+    100026: b_low.001
+    100028: b_low.002
+    100030: Camera
+    100032: Lamp
+    100034: Container
+    100036: Drawer
+    100038: Drawer.001
+    100040: Drawer.002
+    100042: Drawer.003
+    100044: Drawer.004
+    100046: Drawer.005
+    100048: Drawer.006
+    100050: Drawer.007
+    100052: Drawer.008
+    100054: Drawer.009
+    100056: Drawer.000
+    400000: a_low
+    400002: b_low
+    400004: b_low 1
+    400006: c_low
+    400008: d_low
+    400010: //RootNode
+    400012: e_low
+    400014: Low
+    400016: transform1
+    400018: transform2
+    400020: transform3
+    400022: transform4
+    400024: transform5
+    400026: b_low.001
+    400028: b_low.002
+    400030: Camera
+    400032: Lamp
+    400034: Container
+    400036: Drawer
+    400038: Drawer.001
+    400040: Drawer.002
+    400042: Drawer.003
+    400044: Drawer.004
+    400046: Drawer.005
+    400048: Drawer.006
+    400050: Drawer.007
+    400052: Drawer.008
+    400054: Drawer.009
+    400056: Drawer.000
+    2000000: Camera
+    2300000: b_low
+    2300002: b_low.001
+    2300004: b_low.002
+    2300006: //RootNode
+    2300008: Container
+    2300010: Drawer
+    2300012: Drawer.001
+    2300014: Drawer.002
+    2300016: Drawer.003
+    2300018: Drawer.004
+    2300020: Drawer.005
+    2300022: Drawer.006
+    2300024: Drawer.007
+    2300026: Drawer.008
+    2300028: Drawer.009
+    2300030: Drawer.000
+    3300000: b_low
+    3300002: b_low.001
+    3300004: b_low.002
+    3300006: //RootNode
+    3300008: Container
+    3300010: Drawer
+    3300012: Drawer.001
+    3300014: Drawer.002
+    3300016: Drawer.003
+    3300018: Drawer.004
+    3300020: Drawer.005
+    3300022: Drawer.006
+    3300024: Drawer.007
+    3300026: Drawer.008
+    3300028: Drawer.009
+    3300030: Drawer.000
+    4300000: b_low
+    4300002: b_low.002
+    4300004: b_low.001
+    4300006: Cube.009
+    4300008: Drawer.006
+    4300010: Drawer.005
+    4300012: Drawer.004
+    4300014: Drawer.003
+    4300016: Drawer.002
+    4300018: Drawer.001
+    4300020: Drawer
+    4300022: Container
+    4300024: Drawer.007
+    4300026: Drawer.009
+    4300028: Drawer.008
+    4300030: Drawer.000
+    9500000: //RootNode
+    10800000: Lamp
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
