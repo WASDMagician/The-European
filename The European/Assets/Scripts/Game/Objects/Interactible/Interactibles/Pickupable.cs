@@ -21,10 +21,12 @@ public class Pickupable : Interactible {
         }
         if(pickupable_rigidbody != null && interactor != null)
         {
+            SendMessage("Picked_Up", SendMessageOptions.DontRequireReceiver);
             pickupable_rigidbody.isKinematic = true;
             transform.SetParent(interactor.gameObject.transform);
             transform.position = interactor.Get_Hold_Point();
             transform.rotation = interactor.transform.rotation;
+            
         }
     }
 

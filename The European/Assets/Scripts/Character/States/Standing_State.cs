@@ -30,20 +30,19 @@ public class Standing_State : Character_State {
     {
         base.Update_State();
         float y_vel = character_rigidbody.velocity.y;
-        if (Input.GetKeyDown(KeyCode.Space) && Is_Grounded() == true)
+        if (Input.GetButtonDown("Jump") && Is_Grounded() == true)
         {
             character_rigidbody.AddForce(this.transform.up * jump_force, ForceMode.Impulse);
             y_vel = character_rigidbody.velocity.y;
         }
-        if(Input.GetKeyDown(interact_keycode))
+        if(Input.GetButtonDown("Interact"))
         {
             Interact();
         }
-        character_rigidbody.velocity = new Vector3(Input.GetAxis("Horizontal") * move_speed, y_vel, Input.GetAxis("Vertical") * move_speed);
-        if (Input.anyKey)
-        {
-            Set_Direction(character_rigidbody.velocity);
-        }
+        Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), y_vel, Input.GetAxis("Vertical"));
+        character_rigidbody.velocity = movement * move_speed;
+        Set_Direction(movement);
+        
     }
 
     void Interact()
