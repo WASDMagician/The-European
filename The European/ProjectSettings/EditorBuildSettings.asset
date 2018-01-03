@@ -8,6 +8,3 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/UK/UK.unity
     guid: 74c8f602b33e9f049b9c39465f4a200b
-  - enabled: 1
-    path: Assets/Scenes/Levels/France/France.unity
-    guid: ab368bfed4b974f4d987488905192fdb
