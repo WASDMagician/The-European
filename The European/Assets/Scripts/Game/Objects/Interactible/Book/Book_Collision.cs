@@ -13,10 +13,14 @@ public class Book_Collision : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
+        if(collision.gameObject == this.gameObject)
+        {
+            return;
+        }
         if(collision.gameObject.CompareTag("Book"))
         {
             Collider collider = GetComponent<Collider>();
-            collider.enabled = false;
+            //collider.enabled = false;
             if(animator == null)
             {
                 animator = GetComponent<Animator>();
