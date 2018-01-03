@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Pickupable : Interactible {
 
-    protected Rigidbody pickupable_rigidbody;
+    Rigidbody pickupable_rigidbody;
     public float forward_offset, upward_offset;
 
     private void Start()
@@ -26,10 +26,7 @@ public class Pickupable : Interactible {
             transform.SetParent(interactor.gameObject.transform);
             transform.position = interactor.Get_Hold_Point();
             transform.rotation = interactor.transform.rotation;
-            Vector3 pos_offset = transform.localPosition;
-            pos_offset.y += upward_offset;
-            pos_offset.z += forward_offset;
-            this.transform.localPosition = pos_offset;            
+            
         }
     }
 

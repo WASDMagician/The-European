@@ -30,28 +30,18 @@ public class Standing_State : Character_State {
     {
         base.Update_State();
         float y_vel = character_rigidbody.velocity.y;
-        if (Input.GetButtonDown("Jump") && Is_Grounded() == true && Game_Controller.game_controller.Get_State() == Game_Controller.game_states.playing)
+        if (Input.GetButtonDown("Jump") && Is_Grounded() == true)
         {
             character_rigidbody.AddForce(this.transform.up * jump_force, ForceMode.Impulse);
             y_vel = character_rigidbody.velocity.y;
         }
-        if(Input.GetButtonDown("Interact") && Game_Controller.game_controller.Get_State() != Game_Controller.game_states.paused)
+        if(Input.GetButtonDown("Interact"))
         {
             Interact();
         }
-        if (Game_Controller.game_controller != null)
-        {
-            if (Game_Controller.game_controller.Get_State() == Game_Controller.game_states.playing)
-            {
-                Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), y_vel, Input.GetAxis("Vertical"));
-                character_rigidbody.velocity = movement * move_speed;
-                Set_Direction(movement);
-            }
-        }
-        else
-        {
-            print("WAAAAAAAAAAAH");
-        }
+        Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), y_vel, Input.GetAxis("Vertical"));
+        character_rigidbody.velocity = movement * move_speed;
+        Set_Direction(movement);
         
     }
 
