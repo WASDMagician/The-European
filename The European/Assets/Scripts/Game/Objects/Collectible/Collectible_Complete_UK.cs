@@ -14,7 +14,6 @@ public class Collectible_Complete_UK : Collectible_Complete_Trigger {
     public override void Trigger_Completion()
     {
         base.Trigger_Completion();
-        print("TRIGGER");
         if(animator == null)
         {
             animator = GetComponent<Animator>();

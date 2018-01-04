@@ -21,7 +21,9 @@ public class Display_Image : MonoBehaviour {
         if (_sprite != null && image != null)
         {
             image.sprite = _sprite;
+            image.SetNativeSize();
             image.gameObject.SetActive(true);
+
         }
     }
 

@@ -20,9 +20,11 @@ public class Ball_Pickup_Card : MonoBehaviour {
 
     IEnumerator Send_Off()
     {
+        Game_Controller_UK.game_controller.Switch_State(Game_Controller.game_states.examining);
         image.gameObject.SetActive(true);
         yield return new WaitForSeconds(1);
         image.gameObject.SetActive(false);
         Destroy(this.gameObject);
+        Game_Controller_UK.game_controller.Switch_State(Game_Controller.game_states.playing);
     }
 }

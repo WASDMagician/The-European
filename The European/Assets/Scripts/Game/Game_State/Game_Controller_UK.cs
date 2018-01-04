@@ -11,7 +11,7 @@ public class Game_Controller_UK : Game_Controller {
     void Start () {
         game_controller = this;
         collectible_complete = FindObjectOfType<Collectible_Complete_UK>();
-        total_uk = 4;
+        total_uk = 7;
 	}
 	
 	// Update is called once per frame
